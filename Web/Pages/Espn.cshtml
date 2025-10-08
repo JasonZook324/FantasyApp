@@ -1,0 +1,25 @@
+@page
+@model Web.Pages.EspnModel
+@{
+    ViewData["Title"] = "ESPN";
+}
+<h2>ESPN League</h2>
+<form method="get">
+    <div class="mb-3">
+        <label for="userId" class="form-label">User Id</label>
+        <input id="userId" name="userId" class="form-control" type="number" value="@Model.UserId" />
+    </div>
+    <button class="btn btn-primary" type="submit">Load League</button>
+</form>
+@if (!string.IsNullOrWhiteSpace(Model.Error))
+{
+    <div class="alert alert-danger mt-3">@Model.Error</div>
+}
+@if (!string.IsNullOrWhiteSpace(Model.LeagueName))
+{
+    <div class="mt-3">
+        <p><strong>League Name:</strong> @Model.LeagueName</p>
+        <p><strong>Scoring Period:</strong> @Model.ScoringPeriodId</p>
+        <p><strong>League Size:</strong> @Model.LeagueSize</p>
+    </div>
+}
