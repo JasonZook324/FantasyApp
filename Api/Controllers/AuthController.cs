@@ -1,8 +1,7 @@
 using Application.Abstractions;
 using Application.Abstractions.Logging;
-using Core.Domain;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Api.Contracts;
 
 namespace Api.Controllers;
 
@@ -136,9 +135,3 @@ public class AuthController : ControllerBase
         return Unauthorized();
     }
 }
-
-public record RegisterRequest(string Username, string Password, int RoleId);
-public record LoginRequest(string Username, string Password);
-public record UpdateAuthUserRequest(string Username, int RoleId, bool IsActive);
-public record ChangePasswordRequest(string? CurrentPassword, string NewPassword);
-public record AuthUserResponse(int Id, string? Username, bool? IsActive, int? RoleId);
