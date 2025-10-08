@@ -1,11 +1,17 @@
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Core.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Services
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
+
+// Password hasher for users
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
 // Configure EF Core with Neon (PostgreSQL) connection string from appsettings
 var connectionString = builder.Configuration.GetConnectionString("FantasyAppDb");
@@ -25,6 +31,8 @@ app.UseSwaggerUI();
 
 // Pipeline
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 var summaries = new[]
 {

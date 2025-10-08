@@ -10,6 +10,9 @@ namespace Infrastructure.Data
         }
 
         public DbSet<Player> Players => Set<Player>();
+        public DbSet<User> Users => Set<User>();
+        public DbSet<EspnData> EspnDatas => Set<EspnData>();
+        public DbSet<Role> Roles => Set<Role>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
