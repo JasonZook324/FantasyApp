@@ -3,6 +3,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+// Session for simple login state
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
 // Typed HttpClient to call backend API
 var apiBaseUrl = builder.Configuration["ApiBaseUrl"] ?? "https://localhost:5001/";
 builder.Services.AddHttpClient("Api", client =>
@@ -23,6 +27,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession(); // enable session
 
 app.UseAuthorization();
 

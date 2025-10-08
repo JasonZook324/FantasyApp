@@ -1,0 +1,50 @@
+/* Login page specific styles inspired by copystyles (tailwind tokens mapped to CSS vars) */
+.login-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+@media (min-width: 992px) {
+  .login-page { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+
+.brand {
+  display: flex; align-items: center; gap: .75rem; color: var(--foreground);
+}
+.brand .pulse { color: var(--accent); font-size: 1.75rem; }
+.brand h1 { margin: 0; font-weight: 800; letter-spacing: .3px; }
+
+.tabs {
+  display: inline-flex; background: var(--sidebar-background); border: 1px solid var(--border);
+  border-radius: 999px; padding: .25rem; gap: .25rem; box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
+}
+.tab {
+  padding: .5rem 2.25rem; border-radius: 999px; background: transparent; border: none; color: var(--muted-foreground);
+}
+.tab.active { background: #0b0b0c; color: var(--foreground); box-shadow: 0 0 0 1px var(--border) inset; }
+
+.panel {
+  background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 1.75rem; color: var(--card-foreground);
+}
+.panel h2 { font-weight: 800; margin-bottom: .25rem; }
+.panel p.sub { color: var(--muted-foreground); margin-bottom: 1.25rem; }
+
+.input-dark {
+  background: #0a0b0c; color: var(--foreground); border: 1px solid var(--border); border-radius: 999px; padding: .9rem 1.1rem;
+}
+.input-dark::placeholder { color: #6b7280; }
+
+.btn-pill {
+  display:inline-block; width: 100%; border-radius: 999px; padding: .85rem 1.1rem; font-weight: 600;
+  background: var(--primary); color: var(--primary-foreground); border: 1px solid var(--primary);
+}
+.btn-pill:hover { filter: brightness(1.06); }
+
+.features h2 { font-size: clamp(2rem, 2vw + 1.5rem, 3.25rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
+.features ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.features li { display:flex; gap:.75rem; align-items:flex-start; color: var(--foreground); }
+.features li .check { color: var(--accent); font-size: 1.2rem; margin-top:.25rem; }
+.features p { color: var(--muted-foreground); margin: 0; }
+
+.alert-danger { border-radius: 12px; }
