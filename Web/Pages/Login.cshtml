@@ -1,0 +1,81 @@
+@page "{mode?}"
+@model Web.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+    var isRegister = string.Equals(Model.Mode, "register", StringComparison.OrdinalIgnoreCase);
+}
+@section Head{
+    <link rel="stylesheet" href="~/css/login.css" />
+}
+<div class="login-page">
+    <div>
+        <div class="brand mb-3">
+            <div class="pulse">&#8767;</div>
+            <h1>ESPN Fantasy Manager</h1>
+        </div>
+
+        <div class="tabs mb-3">
+            <a class="tab @(isRegister ? string.Empty : "active")" asp-page="/Login" asp-route-mode="login">Login</a>
+            <a class="tab @(isRegister ? "active" : string.Empty)" asp-page="/Login" asp-route-mode="register">Register</a>
+        </div>
+
+        @if (!isRegister)
+        {
+            <div class="panel">
+                <h2>Welcome back</h2>
+                <p class="sub">Log in to manage your ESPN Fantasy leagues</p>
+
+                @if (!string.IsNullOrWhiteSpace(Model.Error))
+                {
+                    <div class="alert alert-danger">@Model.Error</div>
+                }
+
+                <form method="post" asp-page="/Login">
+                    <div class="mb-3">
+                        <label asp-for="Username" class="form-label">Username</label>
+                        <input asp-for="Username" class="form-control input-dark" placeholder="Enter your username" autocomplete="username" />
+                    </div>
+                    <div class="mb-4">
+                        <label asp-for="Password" class="form-label">Password</label>
+                        <input asp-for="Password" type="password" class="form-control input-dark" placeholder="Enter your password" autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn btn-pill">Log in</button>
+                </form>
+            </div>
+        }
+        else
+        {
+            <div class="panel">
+                <h2>Create an account</h2>
+                <p class="sub">Get started with ESPN Fantasy Manager</p>
+
+                @if (!string.IsNullOrWhiteSpace(Model.RegisterError))
+                {
+                    <div class="alert alert-danger">@Model.RegisterError</div>
+                }
+
+                <form method="post" asp-page="/Login" asp-page-handler="Register">
+                    <div class="mb-3">
+                        <label asp-for="RegisterUsername" class="form-label">Username</label>
+                        <input asp-for="RegisterUsername" class="form-control input-dark" placeholder="Choose a username" autocomplete="username" />
+                    </div>
+                    <div class="mb-4">
+                        <label asp-for="RegisterPassword" class="form-label">Password</label>
+                        <input asp-for="RegisterPassword" type="password" class="form-control input-dark" placeholder="Choose a password" autocomplete="new-password" />
+                    </div>
+                    <button type="submit" class="btn btn-pill">Create account</button>
+                </form>
+            </div>
+        }
+    </div>
+
+    <div class="features">
+        <h2>Manage Your Fantasy League</h2>
+        <ul>
+            <li><span class="check">?</span><p>Connect your ESPN credentials and import all your leagues</p></li>
+            <li><span class="check">?</span><p>Get AI-powered recommendations and trade analysis</p></li>
+            <li><span class="check">?</span><p>Export waiver wire and roster data to CSV</p></li>
+            <li><span class="check">?</span><p>View detailed standings, matchups, and team rosters</p></li>
+        </ul>
+    </div>
+</div>

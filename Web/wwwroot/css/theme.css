@@ -1,0 +1,157 @@
+/* Design tokens mapped from Web/copystyles/FTA/tailwind.config.ts */
+:root {
+  --radius: 10px;
+
+  --background: #0a0a0a;
+  --foreground: #e5e7eb;
+
+  --card: #111213;
+  --card-foreground: #e5e7eb;
+
+  --popover: #111213;
+  --popover-foreground: #e5e7eb;
+
+  --primary: #3b82f6;              /* blue-500 */
+  --primary-foreground: #0b1021;
+
+  --secondary: #1f2937;            /* gray-800 */
+  --secondary-foreground: #e5e7eb;
+
+  --muted: #111827;                /* gray-900 */
+  --muted-foreground: #9ca3af;     /* gray-400 */
+
+  --accent: #22c55e;               /* green-500 */
+  --accent-foreground: #0b1021;
+
+  --destructive: #ef4444;          /* red-500 */
+  --destructive-foreground: #0b1021;
+
+  --border: #27272a;               /* zinc-800 */
+  --input: #1f2937;
+  --ring: #60a5fa;                 /* blue-400 */
+
+  --chart-1: #22d3ee;              /* cyan-400 */
+  --chart-2: #a78bfa;              /* violet-400 */
+  --chart-3: #f59e0b;              /* amber-500 */
+  --chart-4: #34d399;              /* emerald-400 */
+  --chart-5: #fb7185;              /* rose-400 */
+
+  --sidebar-background: #0b1021;
+  --sidebar-foreground: #e5e7eb;
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: #0f172a;
+  --sidebar-accent-foreground: #e5e7eb;
+  --sidebar-border: #1f2937;
+  --sidebar-ring: var(--ring);
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #e5e7eb;
+  --card: #0f1115;
+  --card-foreground: #e5e7eb;
+  --popover: #0f1115;
+  --popover-foreground: #e5e7eb;
+  --secondary: #111827;
+  --muted: #0f172a;
+  --muted-foreground: #9ca3af;
+  --border: #1f2937;
+}
+
+/* Base */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  background: radial-gradient(1200px 800px at 90% -10%, #1e293b80 10%, rgba(15, 23, 42, 0.1) 60%, transparent),
+              radial-gradient(1600px 1000px at 20% -10%, rgba(2, 6, 23, 0.6) 30%, rgba(2, 6, 23, 0.1) 70%, transparent),
+              radial-gradient(800px 600px at -10% 110%, rgba(2, 6, 23, 0.6) 10%, rgba(2, 6, 23, 0.1) 30%, transparent),
+              var(--background);
+}
+
+/* Containers */
+.navbar, header, footer {
+  background-color: var(--sidebar-background);
+  color: var(--sidebar-foreground);
+  border-color: var(--sidebar-border);
+}
+.container {
+  color: var(--foreground);
+}
+
+/* Cards */
+.card {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* Buttons */
+.btn-primary, .btn.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+}
+.btn-primary:hover, .btn.btn-primary:hover {
+  filter: brightness(1.08);
+}
+.btn-secondary, .btn.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border-color: var(--secondary);
+}
+
+/* Forms */
+.form-control, input, select, textarea {
+  background-color: var(--input);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+.form-label {
+  color: var(--muted-foreground);
+}
+
+/* Tables */
+.table {
+  color: var(--foreground);
+  border-color: var(--border);
+}
+.table thead th {
+  color: var(--muted-foreground);
+  border-bottom: 1px solid var(--border);
+}
+.table td, .table th {
+  border-color: var(--border);
+}
+
+/* Links */
+a, .nav-link {
+  color: var(--foreground);
+}
+a:hover, .nav-link:hover {
+  color: var(--primary);
+}
+
+/* Utility */
+.border {
+  border: 1px solid var(--border) !important;
+}
+.rounded {
+  border-radius: var(--radius) !important;
+}
+
+/* Alerts */
+.alert-danger {
+  background-color: #7f1d1d;
+  color: #fecaca;
+  border-color: #991b1b;
+}
