@@ -1,0 +1,106 @@
+# -> Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# -> VS Code (keep common shared files)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# -> Build artifacts
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+publish/
+TestResults/
+BenchmarkDotNet.Artifacts/
+
+# -> NuGet
+packages/
+!packages/build/
+!packages/repositories.config
+*.nupkg
+*.snupkg
+*.nuspec
+
+# -> MSBuild / diagnostics
+*.tlog
+*.svclog
+*.gpState
+*.lastcodeanalysissucceeded
+
+# -> ASP.NET Core
+wwwroot/lib/
+App_Data/
+ScaffoldingReadMe.txt
+# Note: appsettings.json and appsettings.Development.json are typically committed
+
+# -> Local-only configuration
+appsettings.*.local.json
+appsettings.Local.json
+*.secret.json
+secrets.json
+.env
+.env.*.local
+
+# -> Publishing
+**/Properties/PublishProfiles/*.pubxml
+**/*.pubxml.user
+*.publishsettings
+*.publishproj
+
+# -> Code coverage / test artifacts (xUnit + coverlet)
+*.coverage
+*.coveragexml
+.coverage
+.coverlet/
+coverage*.json
+coverage.opencover.xml
+coverage.cobertura.xml
+coverage.info
+
+# -> JetBrains / ReSharper / Rider
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+.idea/
+
+# -> NCrunch
+_nCrunch_*
+.*crunch*.local.xml
+*.ncrunchsolution
+*.ncrunchproject
+
+# -> SonarQube
+.sonarqube/
+
+# -> StyleCop / analyzers
+StyleCopReport.xml
+
+# -> Azure local tooling
+.localhistory/
+ASALocalRun/
+
+# -> Databases
+*.mdf
+*.ldf
+*.ndf
+
+# -> OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# -> Misc
+*.bak
+*.orig
+*.rej
