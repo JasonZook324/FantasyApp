@@ -13,6 +13,7 @@ namespace Infrastructure.Data
         public DbSet<User> Users => Set<User>();
         public DbSet<EspnData> EspnDatas => Set<EspnData>();
         public DbSet<Role> Roles => Set<Role>();
+        public DbSet<LogEntry> Logs => Set<LogEntry>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
