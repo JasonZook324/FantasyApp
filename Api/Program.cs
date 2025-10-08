@@ -6,6 +6,7 @@ using Application.Abstractions;
 using Application.Services;
 using Application.Abstractions.Repositories;
 using Infrastructure.Repositories;
+using Application.Abstractions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,11 +20,13 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IEspnDataService, EspnDataService>();
+builder.Services.AddScoped<ILogService, LogService>();
 
 // Repositories (data access)
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IEspnDataRepository, EspnDataRepository>();
+builder.Services.AddScoped<ILogRepository, LogRepository>();
 
 // Password hasher for users
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
