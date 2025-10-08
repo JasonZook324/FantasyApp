@@ -1,0 +1,108 @@
+﻿@page
+@model Web.Pages.EspnAuthModel
+@{
+    ViewData["Title"] = "ESPN Auth";
+}
+@section Head{
+    <link rel="stylesheet" href="~/css/login.css" />
+}
+<div class="login-page">
+    <div>
+        <div class="brand mb-3">
+            <div class="pulse">&#8767;</div>
+            <h1>ESPN Fantasy Manager</h1>
+        </div>
+
+        <div class="panel">
+            <h2>ESPN Authentication Cookies</h2>
+            <p class="sub">Enter your ESPN cookies to access private leagues. These are required for authenticating with ESPN's Fantasy API v3.</p>
+
+            @if (!string.IsNullOrWhiteSpace(Model.Error))
+            {
+                <div class="alert alert-danger">@Model.Error</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.Success))
+            {
+                <div class="alert alert-success">@Model.Success</div>
+            }
+            @if (Model.TestOk is not null)
+            {
+                if (Model.TestOk.Value)
+                {
+                    <div class="alert alert-success">Test connection successful.</div>
+                }
+                else
+                {
+                    <div class="alert alert-danger">Test connection failed. Please verify cookies, league id and season.</div>
+                }
+            }
+
+            <form method="post">
+                <input type="hidden" name="UserId" value="@Model.UserId" />
+                <div class="mb-3">
+                    <label class="form-label" for="espnS2">ESPN_S2 Cookie</label>
+                    <input id="espnS2" name="EspnS2" class="form-control input-dark" placeholder="Enter your ESPN_S2 cookie value" value="@Model.EspnS2" />
+                    <small class="text-muted">Session authentication cookie from ESPN</small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="swid">SWID Cookie</label>
+                    <input id="swid" name="Swid" class="form-control input-dark" placeholder="Enter your SWID cookie value" value="@Model.Swid" />
+                    <small class="text-muted">User identifier cookie from ESPN</small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="leagueId">League ID</label>
+                    <input id="leagueId" name="LeagueId" class="form-control input-dark" placeholder="Enter a league ID you have access to" value="@Model.LeagueId" />
+                    <small class="text-muted">A fantasy league ID you're a member of (used to validate credentials)</small>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="seasonId">Season</label>
+                    <input id="seasonId" name="SeasonId" type="number" class="form-control input-dark" placeholder="2024" value="@Model.SeasonId" />
+                    <small class="text-muted">The season year for the test league (e.g., 2024, 2025)</small>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" asp-page-handler="Test" class="btn btn-secondary">Test Connection</button>
+                    <button type="submit" asp-page-handler="Save" class="btn btn-pill">Save Cookies</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="d-flex align-items-center justify-content-between">
+            <h2>How to Get ESPN Cookies</h2>
+            <form method="post">
+                <input type="hidden" name="UserId" value="@Model.UserId" />
+                <input type="hidden" name="EspnS2" value="@Model.EspnS2" />
+                <input type="hidden" name="Swid" value="@Model.Swid" />
+                <input type="hidden" name="LeagueId" value="@Model.LeagueId" />
+                <input type="hidden" name="SeasonId" value="@Model.SeasonId" />
+                <button type="submit" class="btn btn-secondary" asp-page-handler="ToggleHelp">@(Model.ShowHelp ? "Hide Instructions" : "Show Instructions")</button>
+            </form>
+        </div>
+        @if (Model.ShowHelp)
+        {
+            <ol class="mt-3" style="line-height:1.8">
+                <li><strong>Open ESPN Fantasy</strong><br/>Navigate to fantasy.espn.com and log in</li>
+                <li class="mt-2"><strong>Open Developer Tools</strong><br/>Press F12 or right-click → Inspect</li>
+                <li class="mt-2"><strong>Go to Application Tab</strong><br/>Find Cookies → https://fantasy.espn.com</li>
+                <li class="mt-2"><strong>Copy Cookie Values</strong><br/>Find <code>espn_s2</code> and <code>SWID</code>, copy their values</li>
+                <li class="mt-2"><strong>Security Notice</strong><br/>These cookies provide access to your ESPN account. Keep them secure and never share them.</li>
+            </ol>
+
+            @if (Model.Diagnostics is not null)
+            {
+                <hr />
+                <h5>Diagnostics</h5>
+                <pre class="small" style="white-space:pre-wrap;word-break:break-word;">
+BaseUrl: @Model.Diagnostics.BaseUrl
+URL:     @Model.Diagnostics.Url
+Status:  @(Model.Diagnostics.StatusCode?.ToString() ?? "<none>")
+Cookies: @Model.Diagnostics.CookiesSummary
+Response Preview:
+@Model.Diagnostics.ResponsePreview
+Exception: @Model.Diagnostics.Exception
+                </pre>
+            }
+        }
+    </div>
+</div>

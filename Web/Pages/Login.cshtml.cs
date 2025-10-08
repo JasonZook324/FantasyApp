@@ -20,6 +20,9 @@ public class LoginModel : PageModel
     [FromRoute]
     public string? Mode { get; set; }
 
+    [FromQuery]
+    public string? ReturnUrl { get; set; }
+
     [BindProperty]
     public string Username { get; set; } = string.Empty;
 
@@ -87,11 +90,13 @@ public class LoginModel : PageModel
                         if (root.TryGetProperty("leagueSize", out var ls) && ls.ValueKind == JsonValueKind.Number)
                             HttpContext.Session.SetInt32("leagueSize", ls.GetInt32());
                     }
-                    // Non-success: ignore; user stays logged in
                 }
-                catch
+                catch { }
+
+                // Redirect to returnUrl if local and provided
+                if (!string.IsNullOrWhiteSpace(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
                 {
-                    // Ignore league fetch errors; user stays logged in
+                    return Redirect(ReturnUrl);
                 }
 
                 return RedirectToPage("/Index");
@@ -125,7 +130,6 @@ public class LoginModel : PageModel
         try
         {
             var client = _httpClientFactory.CreateClient("Api");
-            // Default new users to RoleId = 1 (or adjust if you have a specific role id)
             var res = await client.PostAsJsonAsync("api/auth/register", new { Username = RegisterUsername, Password = RegisterPassword, RoleId = 1 }, ct);
 
             if (res.IsSuccessStatusCode)
