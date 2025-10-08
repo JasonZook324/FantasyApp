@@ -11,37 +11,116 @@
     <script src="~/js/theme.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
-            <div class="container d-flex align-items-center">
-                <a class="navbar-brand" asp-page="/Index">FantasyApp</a>
-                <div class="ms-auto d-flex gap-2 align-items-center">
-                    <a class="nav-link" asp-page="/Index">Home</a>
-
-                    @{
-                        var username = Context?.Session?.GetString("Username");
-                        if (string.IsNullOrEmpty(username))
-                        {
-                            <a class="btn btn-secondary btn-sm" asp-page="/Login">Login</a>
-                        }
-                        else
-                        {
-                            <span class="mx-2">Hello, @username</span>
-                            <form class="d-inline" method="post" asp-page="/Login" asp-page-handler="Logout">
-                                <button type="submit" class="btn btn-secondary btn-sm">Logout</button>
-                            </form>
-                        }
-                    }
-
-                    <button class="btn btn-secondary btn-sm" type="button" id="theme-toggle">Toggle theme</button>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="dot"></span>
+                <div>
+                    <div>ESPN Fantasy</div>
+                    <small class="text-muted">API Manager</small>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+            <div class="spacer"></div>
+            <div class="section">Main</div>
+            <ul class="nav">
+                <li><a class="@(Context.Request.Path.StartsWithSegments("/Index") ? "active" : null)" asp-page="/Index"><span class="icon">??</span> Home</a></li>
+                <li><a class="@(Context.Request.Path.StartsWithSegments("/EspnAuth") ? "active" : null)" asp-page="/EspnAuth"><span class="icon">??</span> Fantasy Manager</a></li>
+            </ul>
+            <div class="section">League</div>
+            <ul class="nav">
+                <li><button disabled><span class="icon">??</span> Standings</button></li>
+                <li><button disabled><span class="icon">??</span> Team Rosters</button></li>
+                <li><button disabled><span class="icon">??</span> Matchups</button></li>
+                <li><button disabled><span class="icon">??</span> Player Details</button></li>
+                <li><button disabled><span class="icon">??</span> AI Recommendations</button></li>
+                <li><button disabled><span class="icon">??</span> Trade Analyzer</button></li>
+                <li><button disabled><span class="icon">??</span> Prompt Builder</button></li>
+            </ul>
+            <div class="spacer"></div>
+            <div class="section">Account</div>
+            <ul class="nav">
+                @{
+                    var username = Context?.Session?.GetString("Username");
+                }
+                @if (string.IsNullOrEmpty(username))
+                {
+                    <li><a asp-page="/Login"><span class="icon">??</span> Login</a></li>
+                }
+                else
+                {
+                    <li><span class="d-flex align-items-center gap-2"><span class="icon">?????</span> Hello, @username</span></li>
+                    <li>
+                        <form method="post" asp-page="/Login" asp-page-handler="Logout">
+                            <button class="btn btn-secondary w-100" type="submit">Logout</button>
+                        </form>
+                    </li>
+                }
+                <li><button id="theme-toggle" class="btn btn-secondary w-100 mt-2" type="button">Toggle theme</button></li>
+            </ul>
+        </aside>
+
+        <div class="content-area">
+            <header>
+                @{ 
+                    var loggedIn = Context?.Session?.GetInt32("UserId") != null; 
+                    var leagueName = Context?.Session?.GetString("leagueName");
+                    var hasLeague = !string.IsNullOrWhiteSpace(leagueName);
+                    if (loggedIn && !hasLeague)
+                    {
+                        <div class="auth-banner-wrap">
+                            <div class="container">
+                                <div class="auth-banner d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-start gap-3">
+                                        <div class="auth-icon">&#9888;</div>
+                                        <div>
+                                            <div class="auth-title">No League Connected</div>
+                                            <div class="auth-sub">Configure your ESPN credentials to get started</div>
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-banner" asp-page="/EspnAuth">
+                                        <span class="me-2">&#9881;</span>Setup Authentication
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else if (loggedIn && hasLeague)
+                    {
+                        var seasonId = Context?.Session?.GetInt32("seasonId");
+                        var leagueSize = Context?.Session?.GetInt32("leagueSize");
+                        var sp = Context?.Session?.GetInt32("scoringPeriodId");
+                        <div class="league-banner-wrap">
+                            <div class="container">
+                                <div class="league-banner d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div class="title d-flex align-items-center gap-2">
+                                            <span>?? @leagueName</span>
+                                            <span class="badge rounded-pill" style="background:#064e3b;color:#bbf7d0;border:1px solid #065f46">FFL</span>
+                                        </div>
+                                        <div class="meta mt-1 small">
+                                            Season @seasonId • @leagueSize teams • Week @sp
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <form method="post" asp-page="/EspnAuth" asp-page-handler="Refresh">
+                                            <button class="btn btn-league" type="submit">? Refresh Data</button>
+                                        </form>
+                                        <form method="post" asp-page="/EspnAuth" asp-page-handler="Disconnect">
+                                            <button class="btn btn-league" type="submit">? Disconnect</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </header>
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
     </div>
 </body>
 </html>
