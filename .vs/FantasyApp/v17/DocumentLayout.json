@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\controllers\\espndatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|solutionrelative:api\\controllers\\espndatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\contracts\\espndtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|solutionrelative:api\\contracts\\espndtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\application\\services\\espndataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|solutionrelative:application\\services\\espndataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\controllers\\logscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|solutionrelative:api\\controllers\\logscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\application\\abstractions\\repositories\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|solutionrelative:application\\abstractions\\repositories\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4F6393C7-A7BF-4D54-ADA5-E3E163283D44}|Core\\Core.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\core\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F6393C7-A7BF-4D54-ADA5-E3E163283D44}|Core\\Core.csproj|solutionrelative:core\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\controllers\\espndatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|solutionrelative:api\\controllers\\espndatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,52 +79,20 @@
       "RelativeMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|solutionrelative:application\\abstractions\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\infrastructure\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\application\\abstractions\\repositories\\iespndatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|solutionrelative:application\\abstractions\\repositories\\iespndatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\infrastructure\\repositories\\espndatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\espndatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\application\\abstractions\\iespndataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|solutionrelative:application\\abstractions\\iespndataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\application\\services\\espndataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|solutionrelative:application\\services\\espndataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F6393C7-A7BF-4D54-ADA5-E3E163283D44}|Core\\Core.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\core\\domain\\logentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F6393C7-A7BF-4D54-ADA5-E3E163283D44}|Core\\Core.csproj|solutionrelative:core\\domain\\logentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\infrastructure\\data\\configurations\\logentryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\configurations\\logentryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\application\\abstractions\\logging\\ilogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|solutionrelative:application\\abstractions\\logging\\ilogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\application\\abstractions\\repositories\\ilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|solutionrelative:application\\abstractions\\repositories\\ilogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\infrastructure\\repositories\\logrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5A73905-1A19-486B-BBB7-356139010F25}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\logrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\application\\services\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3124ABA-F3EF-4C4C-9E14-F9B0FAA5DE27}|Application\\Application.csproj|solutionrelative:application\\services\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\contracts\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|solutionrelative:api\\contracts\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|c:\\users\\64515c\\source\\repos\\learning\\fantasyapp\\api\\contracts\\userdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43304EE2-9F74-4E5B-A6B0-EC9D0CFF3F48}|Api\\Api.csproj|solutionrelative:api\\contracts\\userdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -150,197 +118,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LogService.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Services\\LogService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\LogService.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Services\\LogService.cs",
-              "RelativeToolTip": "Application\\Services\\LogService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "UserDtos.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Contracts\\UserDtos.cs",
+              "RelativeDocumentMoniker": "Api\\Contracts\\UserDtos.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Contracts\\UserDtos.cs",
+              "RelativeToolTip": "Api\\Contracts\\UserDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:49:34.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "LogRepository.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Repositories\\LogRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\LogRepository.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Repositories\\LogRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\LogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:49:29.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ILogRepository.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\Repositories\\ILogRepository.cs",
-              "RelativeDocumentMoniker": "Application\\Abstractions\\Repositories\\ILogRepository.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\Repositories\\ILogRepository.cs",
-              "RelativeToolTip": "Application\\Abstractions\\Repositories\\ILogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:49:25.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ILogService.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\Logging\\ILogService.cs",
-              "RelativeDocumentMoniker": "Application\\Abstractions\\Logging\\ILogService.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\Logging\\ILogService.cs",
-              "RelativeToolTip": "Application\\Abstractions\\Logging\\ILogService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:49:21.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "LogEntryConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Data\\Configurations\\LogEntryConfiguration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Data\\Configurations\\LogEntryConfiguration.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Data\\Configurations\\LogEntryConfiguration.cs",
-              "RelativeToolTip": "Infrastructure\\Data\\Configurations\\LogEntryConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:49:14.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "LogEntry.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Core\\Domain\\LogEntry.cs",
-              "RelativeDocumentMoniker": "Core\\Domain\\LogEntry.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Core\\Domain\\LogEntry.cs",
-              "RelativeToolTip": "Core\\Domain\\LogEntry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:49:04.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IRoleRepository.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\Repositories\\IRoleRepository.cs",
-              "RelativeDocumentMoniker": "Application\\Abstractions\\Repositories\\IRoleRepository.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\Repositories\\IRoleRepository.cs",
-              "RelativeToolTip": "Application\\Abstractions\\Repositories\\IRoleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:12:25.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAUwJAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T15:49:18.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LogsController.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\LogsController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\LogsController.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\LogsController.cs",
-              "RelativeToolTip": "Api\\Controllers\\LogsController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:49:49.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:12:29.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RoleRepository.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Repositories\\RoleRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\RoleRepository.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Repositories\\RoleRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\RoleRepository.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAABRwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:12:32.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Infrastructure",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Infrastructure.csproj",
-              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Infrastructure.csproj",
-              "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
-              "ViewState": "AgIAABoAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-08T16:15:03.529Z",
+              "WhenOpened": "2025-10-08T17:38:47.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "IEspnDataRepository.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\Repositories\\IEspnDataRepository.cs",
-              "RelativeDocumentMoniker": "Application\\Abstractions\\Repositories\\IEspnDataRepository.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\Repositories\\IEspnDataRepository.cs",
-              "RelativeToolTip": "Application\\Abstractions\\Repositories\\IEspnDataRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Title": "AuthDtos.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Contracts\\AuthDtos.cs",
+              "RelativeDocumentMoniker": "Api\\Contracts\\AuthDtos.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Contracts\\AuthDtos.cs",
+              "RelativeToolTip": "Api\\Contracts\\AuthDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:15:58.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EspnDataRepository.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Repositories\\EspnDataRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\EspnDataRepository.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Infrastructure\\Repositories\\EspnDataRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\EspnDataRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:16:03.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IEspnDataService.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\IEspnDataService.cs",
-              "RelativeDocumentMoniker": "Application\\Abstractions\\IEspnDataService.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\IEspnDataService.cs",
-              "RelativeToolTip": "Application\\Abstractions\\IEspnDataService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:16:08.315Z",
+              "WhenOpened": "2025-10-08T17:38:24.656Z",
               "EditorCaption": ""
             },
             {
@@ -358,13 +157,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 3,
               "Title": "EspnDataService.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Services\\EspnDataService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\EspnDataService.cs",
               "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Services\\EspnDataService.cs",
               "RelativeToolTip": "Application\\Services\\EspnDataService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAA9wB4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T16:16:12.379Z",
               "EditorCaption": ""
@@ -406,6 +205,84 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T16:05:42.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EspnDataController.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\EspnDataController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\EspnDataController.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\EspnDataController.cs",
+              "RelativeToolTip": "Api\\Controllers\\EspnDataController.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAUwJUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T14:06:16.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EspnDtos.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Contracts\\EspnDtos.cs",
+              "RelativeDocumentMoniker": "Api\\Contracts\\EspnDtos.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Contracts\\EspnDtos.cs",
+              "RelativeToolTip": "Api\\Contracts\\EspnDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T17:38:51.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IEspnDataService.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\IEspnDataService.cs",
+              "RelativeDocumentMoniker": "Application\\Abstractions\\IEspnDataService.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Abstractions\\IEspnDataService.cs",
+              "RelativeToolTip": "Application\\Abstractions\\IEspnDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T16:16:08.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAUwIkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T15:49:18.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\appsettings.json",
+              "RelativeToolTip": "Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-08T17:15:17.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LogService.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Services\\LogService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\LogService.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Application\\Services\\LogService.cs",
+              "RelativeToolTip": "Application\\Services\\LogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T16:49:34.242Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -472,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Core\\Domain\\User.cs",
               "RelativeDocumentMoniker": "Core\\Domain\\User.cs",
@@ -509,28 +386,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Api\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Api\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAKBhwHYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAQwHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T14:14:52.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EspnDataController.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\EspnDataController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\EspnDataController.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Controllers\\EspnDataController.cs",
-              "RelativeToolTip": "Api\\Controllers\\EspnDataController.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAIBYwGcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T14:06:16.128Z",
               "EditorCaption": ""
             },
             {
@@ -541,7 +405,7 @@
               "RelativeDocumentMoniker": "Api\\Program.cs",
               "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\FantasyApp\\Api\\Program.cs",
               "RelativeToolTip": "Api\\Program.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAABgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T14:05:58.285Z",
               "EditorCaption": ""

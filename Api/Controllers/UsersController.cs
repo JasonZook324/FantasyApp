@@ -1,10 +1,7 @@
 using Application.Abstractions;
 using Application.Abstractions.Logging;
-using Core.Domain;
-using Microsoft.AspNetCore.Identity;
+using Api.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace Api.Controllers;
 
@@ -13,7 +10,7 @@ namespace Api.Controllers;
 public class UsersController : ControllerBase
 {
     private readonly IUserService _users;
-    private readonly IRoleService _roles; // kept in case of future needs
+    private readonly IRoleService _roles;
     private readonly ILogService _logs;
 
     public UsersController(IUserService users, IRoleService roles, ILogService logs)
@@ -110,7 +107,7 @@ public class UsersController : ControllerBase
         }
     }
 
-    private static UserResponse Map(User u) => new(u.Id, u.Username, u.IsActive, u.RoleId);
+    private static UserResponse Map(Core.Domain.User u) => new(u.Id, u.Username, u.IsActive, u.RoleId);
 }
 
 public record UpdateUserRequest(string Username, string? Password, bool IsActive, int RoleId);
