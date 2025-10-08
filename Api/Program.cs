@@ -2,6 +2,10 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Core.Domain;
+using Application.Abstractions;
+using Application.Services;
+using Application.Abstractions.Repositories;
+using Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +13,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+
+// Application services (business logic)
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<IEspnDataService, EspnDataService>();
+
+// Repositories (data access)
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IEspnDataRepository, EspnDataRepository>();
 
 // Password hasher for users
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();

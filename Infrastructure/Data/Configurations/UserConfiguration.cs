@@ -22,11 +22,13 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.PasswordHash)
             .IsRequired();
 
-        builder.Property(u => u.Active)
-            .IsRequired();
+        builder.Property(u => u.IsActive)
+            .IsRequired()
+            .HasDefaultValue(true);
 
         builder.Property(u => u.RoleId)
-            .IsRequired();
+            .IsRequired()
+            .HasDefaultValue(1);
 
         builder.HasOne(u => u.Role)
             .WithMany()

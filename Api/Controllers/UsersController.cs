@@ -1,9 +1,9 @@
+using Application.Abstractions;
 using Core.Domain;
-using Infrastructure.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using Microsoft.AspNetCore.Identity;
 
 namespace Api.Controllers;
 
@@ -11,20 +11,20 @@ namespace Api.Controllers;
 [Route("api/[controller]")]
 public class UsersController : ControllerBase
 {
-    private readonly FantasyDbContext _db;
-    private readonly IPasswordHasher<User> _passwordHasher;
+    private readonly IUserService _users;
+    private readonly IRoleService _roles;
 
-    public UsersController(FantasyDbContext db, IPasswordHasher<User> passwordHasher)
+    public UsersController(IUserService users, IRoleService roles)
     {
-        _db = db;
-        _passwordHasher = passwordHasher;
+        _users = users;
+        _roles = roles;
     }
 
     // GET api/users/{id}
     [HttpGet("{id:int}")]
     public async Task<ActionResult<UserResponse>> GetById(int id, CancellationToken ct)
     {
-        var user = await _db.Users.FindAsync(new object?[] { id }, ct);
+        var user = await _users.GetByIdAsync(id, ct);
         return user is null ? NotFound() : Ok(Map(user));
     }
 
@@ -32,41 +32,8 @@ public class UsersController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<UserResponse>>> GetAll(CancellationToken ct)
     {
-        var users = await _db.Users
-            .OrderBy(u => u.Username)
-            .Select(u => new UserResponse(u.Id, u.Username, u.Active, u.RoleId))
-            .ToListAsync(ct);
-
-        return Ok(users);
-    }
-
-    // POST api/users (register)
-    [HttpPost]
-    public async Task<ActionResult<UserResponse>> Create([FromBody] CreateUserRequest req, CancellationToken ct)
-    {
-        if (string.IsNullOrWhiteSpace(req.Username) || req.Username.Length > 50)
-            return BadRequest("Username is required and must be <= 50 characters.");
-        if (string.IsNullOrWhiteSpace(req.Password))
-            return BadRequest("Password is required.");
-
-        var usernameTaken = await _db.Users.AnyAsync(u => u.Username == req.Username, ct);
-        if (usernameTaken)
-            return Conflict("A user with this username already exists.");
-
-        var user = new User
-        {
-            Username = req.Username,
-            PasswordHash = string.Empty, // set after hashing
-            Active = req.Active,
-            RoleId = req.RoleId
-        };
-
-        user.PasswordHash = _passwordHasher.HashPassword(user, req.Password);
-
-        _db.Users.Add(user);
-        await _db.SaveChangesAsync(ct);
-
-        return CreatedAtAction(nameof(GetById), new { id = user.Id }, Map(user));
+        var users = await _users.GetAllAsync(ct);
+        return Ok(users.Select(Map).ToList());
     }
 
     // PUT api/users/{id}
@@ -76,67 +43,48 @@ public class UsersController : ControllerBase
         if (string.IsNullOrWhiteSpace(req.Username) || req.Username.Length > 50)
             return BadRequest("Username is required and must be <= 50 characters.");
 
-        var user = await _db.Users.FindAsync(new object?[] { id }, ct);
-        if (user is null) return NotFound();
-
-        if (!string.Equals(user.Username, req.Username, StringComparison.Ordinal))
+        try
         {
-            var usernameTaken = await _db.Users.AnyAsync(u => u.Username == req.Username && u.Id != id, ct);
-            if (usernameTaken)
-                return Conflict("A user with this username already exists.");
+            var user = await _users.UpdateAsync(id, req.Username, req.IsActive, req.RoleId, req.Password, ct);
+            if (user is null) return NotFound();
+            return Ok(Map(user));
         }
-
-        user.Username = req.Username;
-        user.Active = req.Active;
-        user.RoleId = req.RoleId;
-
-        if (!string.IsNullOrWhiteSpace(req.Password))
+        catch (InvalidOperationException ex)
         {
-            user.PasswordHash = _passwordHasher.HashPassword(user, req.Password);
+            return Conflict(ex.Message);
         }
-
-        await _db.SaveChangesAsync(ct);
-        return Ok(Map(user));
     }
 
     // DELETE api/users/{id}
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id, CancellationToken ct)
     {
-        var user = await _db.Users.FindAsync(new object?[] { id }, ct);
-        if (user is null) return NotFound();
-
-        _db.Users.Remove(user);
-        await _db.SaveChangesAsync(ct);
-        return NoContent();
+        var ok = await _users.DeleteAsync(id, ct);
+        return ok ? NoContent() : NotFound();
     }
 
     // POST api/users/roles
     [HttpPost("roles")]
     public async Task<ActionResult<RoleResponse>> AddRole([FromBody] string roleName, CancellationToken ct)
     {
-        if (string.IsNullOrWhiteSpace(roleName))
-            return BadRequest("RoleName is required.");
-
-        roleName = roleName.Trim();
-        if (roleName.Length > 25)
-            return BadRequest("RoleName must be <= 25 characters.");
-
-        var exists = await _db.Roles.AnyAsync(r => r.Name == roleName, ct);
-        if (exists)
-            return Conflict("A role with this name already exists.");
-
-        var role = new Role { Name = roleName };
-        _db.Roles.Add(role);
-        await _db.SaveChangesAsync(ct);
-
-        return Ok(new RoleResponse(role.Id, role.Name));
+        try
+        {
+            var role = await _roles.AddAsync(roleName, ct);
+            return Ok(new RoleResponse(role.Id, role.Name));
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return Conflict(ex.Message);
+        }
     }
 
-    private static UserResponse Map(User u) => new(u.Id, u.Username, u.Active, u.RoleId);
+    private static UserResponse Map(User u) => new(u.Id, u.Username, u.IsActive, u.RoleId);
 }
 
-public record CreateUserRequest(string Username, string Password, bool Active, int RoleId);
-public record UpdateUserRequest(string Username, string? Password, bool Active, int RoleId);
-public record UserResponse(int Id, string Username, bool Active, int RoleId);
+public record UpdateUserRequest(string Username, string? Password, bool IsActive, int RoleId);
+public record UserResponse(int Id, string Username, bool IsActive, int RoleId);
 public record RoleResponse(int Id, string Name);
