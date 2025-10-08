@@ -1,17 +1,29 @@
+using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Services
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Configure EF Core with Neon (PostgreSQL) connection string from appsettings
+var connectionString = builder.Configuration.GetConnectionString("FantasyAppDb");
+if (string.IsNullOrWhiteSpace(connectionString))
+{
+    throw new InvalidOperationException("Connection string 'FantasyAppDb' not found. Set it in appsettings.json or environment variables.");
+}
+
+builder.Services.AddDbContext<FantasyDbContext>(options =>
+    options.UseNpgsql(connectionString));
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
+// Swagger
+app.UseSwagger();
+app.UseSwaggerUI();
 
+// Pipeline
 app.UseHttpsRedirection();
 
 var summaries = new[]
