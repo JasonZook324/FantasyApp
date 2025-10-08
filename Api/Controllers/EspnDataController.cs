@@ -1,7 +1,6 @@
+using Application.Abstractions;
 using Core.Domain;
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Api.Controllers;
 
@@ -9,18 +8,18 @@ namespace Api.Controllers;
 [Route("api/[controller]")]
 public class EspnDataController : ControllerBase
 {
-    private readonly FantasyDbContext _db;
+    private readonly IEspnDataService _svc;
 
-    public EspnDataController(FantasyDbContext db)
+    public EspnDataController(IEspnDataService svc)
     {
-        _db = db;
+        _svc = svc;
     }
 
     // GET api/espndata/{id}
     [HttpGet("{id:int}")]
     public async Task<ActionResult<EspnData>> GetById(int id, CancellationToken ct)
     {
-        var entity = await _db.EspnDatas.FindAsync(new object?[] { id }, ct);
+        var entity = await _svc.GetByIdAsync(id, ct);
         return entity is null ? NotFound() : Ok(entity);
     }
 
@@ -28,11 +27,7 @@ public class EspnDataController : ControllerBase
     [HttpGet("user/{userId:int}")]
     public async Task<ActionResult<List<EspnData>>> GetForUser(int userId, CancellationToken ct)
     {
-        var list = await _db.EspnDatas
-            .Where(e => e.UserId == userId)
-            .OrderByDescending(e => e.SeasonId)
-            .ThenBy(e => e.LeagueId)
-            .ToListAsync(ct);
+        var list = await _svc.GetForUserAsync(userId, ct);
         return Ok(list);
     }
 
@@ -40,8 +35,7 @@ public class EspnDataController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<EspnData?>> GetOne([FromQuery] int userId, [FromQuery] int seasonId, [FromQuery] int leagueId, CancellationToken ct)
     {
-        var entity = await _db.EspnDatas
-            .FirstOrDefaultAsync(e => e.UserId == userId && e.SeasonId == seasonId && e.LeagueId == leagueId, ct);
+        var entity = await _svc.GetOneAsync(userId, seasonId, leagueId, ct);
         return entity is null ? NotFound() : Ok(entity);
     }
 
@@ -56,41 +50,18 @@ public class EspnDataController : ControllerBase
         if (req.SeasonId is < 1000 or > 9999)
             return BadRequest("SeasonId must be a 4-digit year.");
 
-        var existing = await _db.EspnDatas
-            .FirstOrDefaultAsync(e => e.UserId == req.UserId && e.SeasonId == req.SeasonId && e.LeagueId == req.LeagueId, ct);
-
-        if (existing is null)
-        {
-            var entity = new EspnData
-            {
-                UserId = req.UserId,
-                EspnS2 = req.EspnS2,
-                SWID = req.SWID,
-                LeagueId = req.LeagueId,
-                SeasonId = req.SeasonId
-            };
-            _db.EspnDatas.Add(entity);
-            await _db.SaveChangesAsync(ct);
+        var entity = await _svc.UpsertAsync(req.UserId, req.SeasonId, req.LeagueId, req.EspnS2, req.SWID, ct);
+        if (entity.Id == 0)
             return CreatedAtAction(nameof(GetById), new { id = entity.Id }, entity);
-        }
-        else
-        {
-            existing.EspnS2 = req.EspnS2;
-            existing.SWID = req.SWID;
-            await _db.SaveChangesAsync(ct);
-            return Ok(existing);
-        }
+        return Ok(entity);
     }
 
     // DELETE api/espndata/{id}
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id, CancellationToken ct)
     {
-        var entity = await _db.EspnDatas.FindAsync(new object?[] { id }, ct);
-        if (entity is null) return NotFound();
-        _db.EspnDatas.Remove(entity);
-        await _db.SaveChangesAsync(ct);
-        return NoContent();
+        var ok = await _svc.DeleteAsync(id, ct);
+        return ok ? NoContent() : NotFound();
     }
 }
 
